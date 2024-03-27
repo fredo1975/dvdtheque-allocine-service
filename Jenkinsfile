@@ -54,7 +54,7 @@ pipeline {
         }
         stage('Build for production') {
         	when {
-                branch 'master'
+                branch 'main'
             }
             steps {
 		 		withMaven(mavenSettingsConfig: 'MyMavenSettings') {
@@ -100,7 +100,7 @@ pipeline {
         }
         stage('Deploy for production') {
             when {
-                branch 'master'
+                branch 'main'
             }
             steps {
 		 		withMaven(mavenSettingsConfig: 'MyMavenSettings') {
